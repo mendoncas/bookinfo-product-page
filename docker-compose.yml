@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bookinfofrontend:
+    build: "./"
+    restart: always
+    network_mode: host
+    environment:
+      - DETAILS_HOSTNAME=localhost
+      - RATINGS_HOSTNAME=localhost
+      - REVIEWS_HOSTNAME=localhost
+      - DETAILS_SERVICE_PORT=12345
+      - RATINGS_SERVICE_PORT=12345
+      - REVIEWS_SERVICE_PORT=12345
+
